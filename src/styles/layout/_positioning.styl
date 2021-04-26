@@ -1,0 +1,73 @@
+//Defaults
+$align-padding = 1em;
+$align-padding-top = $align-padding;
+$align-padding-right = $align-padding;
+$align-padding-bottom = $align-padding;
+$align-padding-left = $align-padding;
+
+// TOP
+align-t-l($top = $align-padding-top, $left = $align-padding-left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+align-t-c($top = $align-padding-top) {
+  position: absolute;
+  top: $top;
+  left: 50%;
+  
+  transform: translateX(-50%);
+}
+
+align-t-r($top = $align-padding-top, $right = $align-padding-right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+// MIDDLE
+align-m-l($left = $align-padding-left) {
+  position: absolute;
+  top: 50%;
+  left: $left;
+
+  transform: translateY(-50%);
+}
+
+align-m-c() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+}
+
+align-m-r($right = $align-padding-right) {
+  position: absolute;
+  top: 50%;
+  right: $right;
+  
+  transform: translateY(-50%);
+}
+
+// Bottom
+align-b-l($bottom = $align-padding-bottom, $left = $align-padding-left) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+align-b-c($bottom = $align-padding-bottom) {
+  position: absolute;
+  bottom: $bottom;
+  left: 50%;
+  
+  transform: translateX(-50%);
+}
+
+align-b-r($bottom = $align-padding-bottom, $right = $align-padding-right) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}

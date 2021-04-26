@@ -1,0 +1,29 @@
+@import './variables/variables';
+@import './helper-functions/font-size'
+
+// @import './basics/_html-elements';
+
+@import './layout/_layout';
+@import './layout/_positioning';
+@import './general-mixins/_overlay';
+
+@import './elements/_box'
+@import './elements/_button'
+@import './elements/_modal-overlay'
+
+breakpointValues(property, cssVarName, reset = true)
+  // if reset 
+  //   {'--' + cssVarName + '-0'} initial
+  //   {'--' + cssVarName + '-1'} initial
+  //   {'--' + cssVarName + '-2'} initial
+  
+  {property}: unquote('var(--' + cssVarName + '-0)');
+  
+  @media $smaller-up {
+    {property}: unquote('var(--' + cssVarName + '-1, var(--' + cssVarName + '-0))');
+  }
+  @media $medium-up {
+    
+    {property}: unquote('var(--' + cssVarName +'-2, var(--' + cssVarName + '-1, var(--' + cssVarName + '-0)))');
+  }
+

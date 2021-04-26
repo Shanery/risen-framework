@@ -1,0 +1,15 @@
+// # For Image Elements
+
+// ## Presets
+// ### Fit Wid
+image-behavior($fit, $position = center center, $width = 100%, $height = auto) {
+  object-fit: $fit;
+  object-position: $position;
+  width: $width;
+  height: $height;
+}
+
+square($width = 100%, $position = center center) {
+  image-behavior(cover, $position, $width, 0);
+  padding-bottom: $width;
+}

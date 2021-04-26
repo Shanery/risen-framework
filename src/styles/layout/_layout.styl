@@ -1,0 +1,93 @@
+// Columns
+$column-gap = $gap-desktop;
+$column-padding = 0.5*$gap-desktop;
+
+columns($gap = $column-gap, $padding = $column-padding) {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+
+  > * {
+    flex: 1 0 0;
+    padding: $padding;
+    // &:not(:last-child) {
+    //   margin-right: $gap;
+    // }
+  }
+}
+
+// Row
+$gap-row = 0.5*$gap-desktop;
+
+row($gap-row = $gap-row) {
+  display: flex;
+  align-items: center;
+
+  // > :not(:last-child) {
+  //   margin-right: $gap-row;
+  // }
+}
+
+// Grid
+$grid-padding = 2%;
+$grid-gap = 2%;
+$default-num-grid-items = 3;
+
+// Container
+
+grid-item-width($num_items, $gap) {
+  return (100% - ($num_items * $gap))/$num_items;
+}
+
+flex-grid($num_items = $default-num-grid-items, $gap = $grid-gap, $padding = $grid-padding) {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  padding: $padding;
+  padding: 'calc(%s - 0.5*%s)' % ($padding $gap);
+
+  > * {
+    margin: 0.5*$gap;
+    width: grid-item-width($num_items, $gap);
+  }
+}
+
+
+// Margin hack for when padding < gap
+flex-grid__mh($num_items = $default-num-grid-items, $gap = $grid-gap, $padding = $grid-padding) {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  padding: $padding;
+  margin: -0.5*$grid-gap;
+
+  background-color: transparent !important; // The margin hack requires 0 background color. To add background color, add a wrapper
+
+  > * {
+    margin: 0.5*$gap;
+    width: grid-item-width($num_items, $gap);
+  }
+}
+
+flex-grid__mh-background($bgc) {
+  height: fit-content;
+  background-color: $bgc;
+}
+
+
+// TODO: Flex-grid Auto...
+// Do space between... add a :after. Flex grow 1, flex-shrink 1;
+
+// stack
+$default-stack-gap = 0.5em
+
+stack($stack-gap = $default-stack-gap) {
+  > :not(:last-child) {
+    margin-bottom $stack-gap
+  }
+}

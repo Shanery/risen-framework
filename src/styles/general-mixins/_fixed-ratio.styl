@@ -1,0 +1,10 @@
+
+// Wrap in a div to ignore $percent-width of parent
+fixed-ratio($height-width-ratio, $percent-width-of-parent = 100%) {
+  position: relative;
+  padding-bottom: ($height-width-ratio / 100%) * $percent-width-of-parent;
+}
+
+fixed-ratio-content() {
+  overlay();
+}

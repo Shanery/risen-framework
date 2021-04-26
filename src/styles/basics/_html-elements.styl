@@ -1,0 +1,134 @@
+$small-fs = 16px;
+$smaller-fs = 17px;
+$medium-fs = 18px;
+$large-fs = 18px;
+$widescreen-fs = 22px;
+
+@import '../responsive-elements/_responsive_images';
+@import '../elements/_responsive-video-embed';
+@import '../elements/_icons';
+
+body {
+  font-size: 12px;
+  font-family: $font-main;
+}
+
+button {
+  font-family: $font-main;
+
+  &:focus {
+    border: 2px solid $light-blue;
+  }
+
+  cursor pointer
+}
+
+* {
+  box-sizing: border-box;
+  ::before, ::after {
+    box-sizing: border-box;
+  }
+}
+
+h1,h2,h3, {
+  font-family: $font-alt;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h4,h5,h6 {
+  font-family: $font-main;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin: 0;
+  font-family: $font-main;
+
+  &:not(:last-child) {
+    margin-bottom: 0.25em;
+  }
+}
+
+input[text] {
+  width: 100%;
+  flex-shrink: 1;
+
+  flex-grow: 1;
+}
+
+input {
+  color: $dark-blue;
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  
+  &:visited {
+    color: currentColor;
+  }
+}
+
+p, h1, h2,h3,h4,h5,h6 {
+  a {
+    text-decoration: underline;
+  }
+}
+
+pre {
+  border-radius: 5px;
+  background-color: #544;
+  padding: 1em;
+  
+  color: white;
+  margin-top: 0;
+  max-width: 100%;
+
+  overflow: auto;
+}
+
+// Font Weights
+.is-book {
+  font-weight 300
+}
+
+.is-roman {
+  font-weight 400
+}
+
+.is-medium-weight {
+  font-weight 500
+}
+
+.is-heavy {
+  font-weight 700
+}

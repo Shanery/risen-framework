@@ -3,6 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '@/docs/Home.vue'
 import DesignSystem from '@/docs/DesignSystem/DesignSystem.vue'
 
+import InProgress from '@/docs/InProgress.vue'
+
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -15,6 +17,16 @@ const routes: Array<RouteConfig> = [
     path: '/design-system',
     name: 'Design System',
     component: DesignSystem,
+  },
+  {
+    path: '/responsive-getters',
+    name: 'Design System',
+    component: InProgress,
+  },
+  {
+    path: '/resource-modules',
+    name: 'Resource Modules',
+    component: InProgress,
   },
 ]
 

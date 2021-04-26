@@ -488,12 +488,6 @@ export default Vue.extend({
     <a-text>
       For a list of layout components available: View the component list on the left.
     </a-text>
-
-    <a-heading id="theming">
-      Theming
-    </a-heading>
-    </code-block>
-    </code-block>
   </v-stack>
 </template>
 
